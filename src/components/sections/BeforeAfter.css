@@ -1,0 +1,163 @@
+.before-after {
+  padding: 4rem 1.5rem;
+  background-color: var(--color-background-alt);
+  overflow: hidden;
+}
+
+.before-after__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.before-after__heading {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.before-after__subtitle {
+  text-align: center;
+  color: var(--color-text-light);
+  font-size: 1.05rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.before-after__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .before-after__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .before-after__heading {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .before-after {
+    padding: 5rem 2rem;
+  }
+
+  .before-after__heading {
+    font-size: 2.5rem;
+  }
+}
+
+/* Slider Card */
+.ba-slider-card {
+  background-color: var(--color-background);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.ba-container {
+  position: relative;
+  overflow: hidden;
+  --position: 50%;
+}
+
+.ba-image-container {
+  aspect-ratio: 4/3;
+  position: relative;
+  background-color: var(--color-background-alt);
+}
+
+.ba-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.ba-image--after {
+  display: block;
+}
+
+.ba-image--before {
+  position: absolute;
+  inset: 0;
+  width: var(--position);
+}
+
+.ba-slider-input {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.ba-slider-input:focus-visible ~ .ba-slider-button {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 3px;
+}
+
+.ba-slider-line {
+  position: absolute;
+  inset: 0;
+  width: 3px;
+  height: 100%;
+  background-color: #fff;
+  left: var(--position);
+  transform: translateX(-50%);
+  pointer-events: none;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.ba-slider-button {
+  position: absolute;
+  background-color: #fff;
+  color: var(--color-primary);
+  padding: 0.5rem;
+  border-radius: 100vw;
+  display: grid;
+  place-items: center;
+  top: 50%;
+  left: var(--position);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.ba-labels {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.ba-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ba-label--before {
+  color: var(--color-text-light);
+}
+
+.ba-label--after {
+  color: var(--color-accent);
+}
+
+.ba-card-title {
+  text-align: center;
+  padding: 0 1rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0;
+}

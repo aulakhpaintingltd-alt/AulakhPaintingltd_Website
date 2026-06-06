@@ -1,0 +1,74 @@
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 200ms ease, transform 200ms ease, box-shadow 200ms ease;
+  line-height: 1.2;
+}
+
+.cta-button:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+/* Primary variant - solid navy background with white text */
+.cta-button--primary {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}
+
+.cta-button--primary:hover {
+  background-color: #333333;
+  box-shadow: 0 4px 12px rgba(26, 26, 26, 0.3);
+  transform: translateY(-2px);
+}
+
+.cta-button--primary:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Secondary variant - gold background with dark text */
+.cta-button--secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.cta-button--secondary:hover {
+  background-color: #c49a38;
+  box-shadow: 0 4px 12px rgba(212, 168, 67, 0.3);
+  transform: translateY(-2px);
+}
+
+.cta-button--secondary:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Phone variant - outlined style with accent colour */
+.cta-button--phone {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+}
+
+.cta-button--phone:hover {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+  transform: translateY(-2px);
+}
+
+.cta-button--phone:active {
+  transform: translateY(0);
+  box-shadow: none;
+}

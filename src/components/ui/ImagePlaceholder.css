@@ -1,0 +1,32 @@
+.image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--color-background-alt);
+  border-radius: 4px;
+  color: var(--color-text-light);
+  overflow: hidden;
+}
+
+.image-placeholder__icon {
+  width: 48px;
+  height: 48px;
+  opacity: 0.6;
+}
+
+.image-placeholder__alt {
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 0 1rem;
+  opacity: 0.8;
+  max-width: 80%;
+  word-break: break-word;
+}
+
+.image-placeholder__img {
+  display: block;
+  object-fit: cover;
+  border-radius: 4px;
+}
