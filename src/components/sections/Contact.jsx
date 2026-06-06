@@ -13,9 +13,9 @@ import {
 } from '../../config/constants';
 
 // EmailJS configuration - Replace these with your actual IDs from emailjs.com
-const EMAILJS_SERVICE_ID = 'service_f9p756l';
-const EMAILJS_TEMPLATE_ID = 'template_hkxx5ro';
-const EMAILJS_PUBLIC_KEY = 'a3ke27LVGTq3slktg';
+const EMAILJS_SERVICE_ID = 'service_nemnur4';
+const EMAILJS_TEMPLATE_ID = 'template_r3j3oie';
+const EMAILJS_PUBLIC_KEY = 'VPcR1AGibunKsMX9c';
 
 /**
  * Contact Section - Sends estimate requests via EmailJS to apathania206@gmail.com
