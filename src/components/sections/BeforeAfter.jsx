@@ -28,17 +28,17 @@ import before11 from '../../assets/images/before_11.jpg';
 import after11 from '../../assets/images/after_11.jpg';
 
 const IMAGE_PAIRS = [
-  { id: 1, before: before1, after: after1, label: 'Living Room Refresh' },
-  { id: 2, before: before2, after: after2, label: 'Bedroom Makeover' },
-  { id: 3, before: before3, after: after3, label: 'Kitchen Transformation' },
-  { id: 4, before: before4, after: after4, label: 'Exterior Painting' },
-  { id: 5, before: before5, after: after5, label: 'Hallway Update' },
-  { id: 6, before: before6, after: after6, label: 'Ceiling Restoration' },
-  { id: 7, before: before7, after: after7, label: 'Trim & Baseboard Work' },
-  { id: 8, before: before8, after: after8, label: 'Surface Preparation' },
-  { id: 9, before: before9, after: after9, label: 'Complete Renovation' },
-  { id: 10, before: before10, after: after10, label: 'Deck Staining' },
-  { id: 11, before: before11, after: after11, label: 'Cabinet Refinishing' },
+  { id: 1, before: before1, after: after1, label: 'Exterior Paint' },
+  { id: 2, before: before2, after: after2, label: 'Exterior house paint facia and shingles' },
+  { id: 3, before: before3, after: after3, label: 'Commercial Shop' },
+  { id: 4, before: before4, after: after4, label: 'Walls Deck Staining' },
+  { id: 5, before: before5, after: after5, label: 'From Light & Plain to Rich & Elegant' },
+  { id: 6, before: before6, after: after6, label: 'Accent Wall' },
+  { id: 7, before: before7, after: after7, label: 'Custom Kids Bedroom' },
+  { id: 8, before: before8, after: after8, label: 'From Construction to Completion' },
+  { id: 9, before: before9, after: after9, label: 'Repaint Exterior' },
+  { id: 10, before: before10, after: after10, label: 'New Home Exterior Finish' },
+  { id: 11, before: before11, after: after11, label: 'A brighter more Moderate Kitchen' },
 ];
 
 /**
