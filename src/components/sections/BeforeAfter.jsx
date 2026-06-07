@@ -46,8 +46,42 @@ const IMAGE_PAIRS = [
  */
 function ImageSlider({ before, after, label }) {
   const [position, setPosition] = useState(50);
+  const [isDragging, setIsDragging] = useState(false);
+  const startX = useRef(null);
+  const startY = useRef(null);
   const containerRef = useRef(null);
 
+  // Only activate slider if touch movement is mostly horizontal
+  const handleTouchStart = (e) => {
+    startX.current = e.touches[0].clientX;
+    startY.current = e.touches[0].clientY;
+    setIsDragging(false);
+  };
+
+  const handleTouchMove = (e) => {
+    if (!startX.current || !containerRef.current) return;
+
+    const deltaX = Math.abs(e.touches[0].clientX - startX.current);
+    const deltaY = Math.abs(e.touches[0].clientY - startY.current);
+
+    // Only slide if horizontal movement is greater than vertical (intentional drag)
+    if (deltaX > deltaY && deltaX > 10) {
+      setIsDragging(true);
+      e.preventDefault(); // prevent page scroll when dragging slider
+      const rect = containerRef.current.getBoundingClientRect();
+      const x = e.touches[0].clientX - rect.left;
+      const percent = Math.max(0, Math.min(100, (x / rect.width) * 100));
+      setPosition(percent);
+    }
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+    startX.current = null;
+    startY.current = null;
+  };
+
+  // Desktop: normal range input behavior
   const handleInput = (e) => {
     setPosition(Number(e.target.value));
   };
@@ -58,6 +92,9 @@ function ImageSlider({ before, after, label }) {
         className="ba-container"
         ref={containerRef}
         style={{ '--position': `${position}%` }}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
       >
         <div className="ba-image-container">
           <img
@@ -81,7 +118,7 @@ function ImageSlider({ before, after, label }) {
           max="100"
           value={position}
           onInput={handleInput}
-          aria-label="Percentage of before photo shown"
+          aria-label="Drag to compare before and after"
           className="ba-slider-input"
         />
         <div className="ba-slider-line" aria-hidden="true"></div>
